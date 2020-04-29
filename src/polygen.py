@@ -3,7 +3,7 @@
 #!/bin/env python3
 
 import random
-from environment import Environment
+from .environment import Environment
 
 class Poly:
     """An OMT Problem Generator"""
@@ -35,7 +35,7 @@ class Poly:
         x_var = self._env.declare_fp_var("x", self._fmt)
         min_fp = self._env.define_fp_var("min_fp", self._fmt,
                                          self._env.make_min_fp(self._fmt))
-        max_fp = self._env.define_fp_var("min_fp", self._fmt,
+        max_fp = self._env.define_fp_var("max_fp", self._fmt,
                                          self._env.make_max_fp(self._fmt))
         lb_cs = self._env.make_fp_leq(min_fp, x_var)
         ub_cs = self._env.make_fp_leq(x_var, max_fp)
