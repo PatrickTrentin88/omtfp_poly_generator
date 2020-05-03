@@ -36,7 +36,7 @@ editing the `~/.bashrc` file.
 
 ## Example #01:
 
-Creating a simple problem with Float32 and a polynome of degree 3.
+Creating a simple problem with Float16 and a polynome of degree 3.
 
     ~$ ./formula_generator.py --float16 --degree 3
     (set-option :config opt.verbose=true)
