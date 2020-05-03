@@ -127,6 +127,9 @@ class Poly:
     def __gen_random_fp_constant(self):
         """Yields a random FP value"""
         seq = "#b{0}".format(''.join(random.choice("01") for i in range(self._tb)))
+        if not '0' in seq[3: 3 + self._fmt[0]]:
+            idx = random.randint[3, 3 + self._fmt[0] - 1]
+            seq[idx] = '0'
         return self._env.make_bv_to_fp(seq, self._fmt)
 
 
